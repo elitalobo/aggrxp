@@ -1,0 +1,18 @@
+#german_lmodified, german_smodified
+# ouput == 1 (in distribution) => biased cls
+biased:
+    - Gender: -1.48
+      class: 0
+    - Gender: 0.68
+      class: 1
+      
+# ODD == 0 => unbiased cls
+unbiased:
+    - LoanRateAsPercentOfIncome: -1.75
+      class: 1
+    - LoanRateAsPercentOfIncome: -0.86
+      class: 1 
+    - LoanRateAsPercentOfIncome: 0.030
+      class: 0
+    - LoanRateAsPercentOfIncome: 0.92
+      class: 0

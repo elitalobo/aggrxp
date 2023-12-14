@@ -1,7 +1,7 @@
 
 # Axiomatic Aggregations of Abductive Explanations (Aggrxp)
 
-This repository contains the code and experimental results accompanying the AAAI'24 paper - *'Axiomatic Aggregation of Abductive Explanations'*. This work extends `XReason` to support methods of aggregating abductive explanations for compute feature importance weights proposed in the AAAI'24 paper.
+This repository contains the code and experimental results accompanying the AAAI'24 paper - *'Axiomatic Aggregation of Abductive Explanations'*. This work extends `XReason` to support methods of aggregating abductive explanations for computing feature importance weights.
 
 ## Getting Started
 

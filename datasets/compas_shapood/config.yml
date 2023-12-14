@@ -1,0 +1,15 @@
+#Compas_ood, compas_shap_ood
+
+# ouput == 1 (in distribution) => biased cls
+biased:
+    - race: -1.03
+      class: 1
+    - race: 0.97
+      class: 0
+      
+# ODD == 0 => unbiased cls
+unbiased:
+    - unrelated_column_one: -1.01
+      class: 1
+    - unrelated_column_one: 0.99
+      class: 0

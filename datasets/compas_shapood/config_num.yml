@@ -1,0 +1,24 @@
+#Compas_ood, compas_shap_ood
+
+ # ouput == 1 (in distribution) => biased cls
+ biased:
+     - race:
+         operator: '<='
+         threshold: 0
+       class: 1
+     - race:
+         operator: '>'
+         threshold: 0
+       class: 0
+
+ # ODD == 0 => unbiased cls
+ unbiased:
+     - unrelated_column_one:
+         operator: '<='
+         threshold: 0
+       class: 1
+     - unrelated_column_one:
+         operator: '>'
+         threshold: 0
+       class: 0
+

@@ -908,6 +908,7 @@ class MXExplainer(object):
             # dummy call with the full instance to detect all the necessary cores
             self.oracle.get_coex(self.hypos, full_instance=True, early_stop=True)
 
+        print("xnum", self.optns.xnum)
         # calling the actual explanation procedure
         self._explain(sample, smallest=smallest, xtype=self.optns.xtype,
                 xnum=self.optns.xnum, unit_mcs=self.optns.unit_mcs,
@@ -920,6 +921,7 @@ class MXExplainer(object):
                     resource.getrusage(resource.RUSAGE_SELF).ru_maxrss - start_mem
 
         if self.verbose:
+            print("found expls", len(self.expls))
             for expl in self.expls:
                 hyps = list(reduce(lambda x, y: x + self.hypos[y[0]:y[1]+1], [self.fcats[c] for c in expl], []))
                 expl = sorted(set(map(lambda v: self.v2feat[v], hyps)))

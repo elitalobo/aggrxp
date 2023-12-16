@@ -272,7 +272,8 @@ class SMTExplainer(object):
             print('  no implication!')
             print(self.oracle.get_model())
             sys.exit(1)
-
+        print("optns.xtype", self.optns.xtype)
+        print("optns.xnum", self.optns.xnum)
         if self.optns.xtype == 'abd':
             # abductive explanations => MUS computation and enumeration
             if not smallest and self.optns.xnum == 1:
@@ -887,7 +888,7 @@ class MXExplainer(object):
                     self.preamble.append('{0} == {1}'.format(f, v))
                 else:
                     self.preamble.append(str(v))
-
+            print("preparing")
             print('  explaining:  "IF {0} THEN {1}"'.format(' AND '.join(self.preamble), self.output))
 
     def explain(self, sample, smallest, expl_ext=None, prefer_ext=False):
@@ -908,7 +909,7 @@ class MXExplainer(object):
             # dummy call with the full instance to detect all the necessary cores
             self.oracle.get_coex(self.hypos, full_instance=True, early_stop=True)
 
-        print("xnum", self.optns.xnum)
+        print("xnum********************************", self.optns.xnum)
         # calling the actual explanation procedure
         self._explain(sample, smallest=smallest, xtype=self.optns.xtype,
                 xnum=self.optns.xnum, unit_mcs=self.optns.unit_mcs,

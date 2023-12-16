@@ -280,6 +280,7 @@ class SMTExplainer(object):
                 expls = [self.compute_minimal_abductive()]
             else:
                 expls = self.enumerate_abductive(smallest=smallest)
+            print("expls",len(expls))
         else:  # contrastive explanations => MCS enumeration
             if self.optns.use_mhs:
                 expls = self.enumerate_contrastive()

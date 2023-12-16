@@ -58,7 +58,7 @@ python src/xreason.py -v -e smt -s z3 --xnum M temp/someotherpath/*_mod.pkl data
 For example, you can generate abductive explanations for the *compas_ood_small_test.csv* dataset by running the following command.
 
 ```commandline
-python src/xreason.py -v -e smt -s z3 --xnum 100 -a datasets/compas_ood/config_num.yml temp/compas_ood/compas_ood_nbestim_100_maxdepth_3_testsplit_0.2.mod.pkl datasets/compas_ood/compas_ood_small_test.csv
+python src/xreason.py -v -e smt -s z3 --xnum 100 temp/compas_ood/compas_ood_nbestim_100_maxdepth_3_testsplit_0.2.mod.pkl datasets/compas_ood/compas_ood_small_test.csv
 ```
 
 We set the value of M sufficiently large to ensure that we get all the possible abductive explanations.

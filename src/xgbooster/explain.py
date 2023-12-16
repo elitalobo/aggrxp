@@ -279,8 +279,10 @@ class SMTExplainer(object):
             if not smallest and self.optns.xnum == 1:
                 expls = [self.compute_minimal_abductive()]
             else:
+                print("enumerating abductive")
                 expls = self.enumerate_abductive(smallest=smallest)
             print("expls",len(expls))
+            print("expls", expls)
         else:  # contrastive explanations => MCS enumeration
             if self.optns.use_mhs:
                 expls = self.enumerate_contrastive()
@@ -295,6 +297,7 @@ class SMTExplainer(object):
                 resource.getrusage(resource.RUSAGE_SELF).ru_utime - self.time
 
         expls = list(map(lambda expl: sorted([self.sel2fid[h] for h in expl]), expls))
+        print("all expls", expls)
 
         if self.dualx:
             self.dualx = list(map(lambda expl: sorted([self.sel2fid[h] for h in expl]), self.dualx))

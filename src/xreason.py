@@ -14,7 +14,7 @@
 
 
 from __future__ import print_function
-from aggrxp.src.data import Data
+from data import Data
 from anchor_wrap import anchor_call
 from lime_wrap import lime_call
 from shap_wrap import shap_call

@@ -124,12 +124,17 @@ The script compute_attack_results.py will aggregate all the explanations in data
 If `Aggrxp` has been significant to a project that leads to an academic publication, please, acknowledge that fact by citing it:
 
 ```
-@misc{biradar2023model,
-      title={Model Explanations via the Axiomatic Causal Lens}, 
-      author={Gagan Biradar and Vignesh Viswanathan and Yair Zick},
-      year={2023},
-      eprint={2109.03890},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@inproceedings{10.1609/aaai.v38i10.28986,
+author = {Biradar, Gagan and Izza, Yacine and Lobo, Elita and Viswanathan, Vignesh and Zick, Yair},
+title = {Axiomatic aggregations of abductive explanations},
+year = {2024},
+isbn = {978-1-57735-887-9},
+publisher = {AAAI Press},
+url = {https://doi.org/10.1609/aaai.v38i10.28986},
+doi = {10.1609/aaai.v38i10.28986},
+booktitle = {Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence and Thirty-Sixth Conference on Innovative Applications of Artificial Intelligence and Fourteenth Symposium on Educational Advances in Artificial Intelligence},
+articleno = {1238},
+numpages = {9},
+series = {AAAI'24/IAAI'24/EAAI'24}
 }
 ```
